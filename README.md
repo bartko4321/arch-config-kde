@@ -75,7 +75,7 @@ Aby skrypt działał prawidłowo, zachowaj następującą strukturę plików w s
    ```
 3. Sklonuj to repozytorium (podmień link na swój własny!):
    ```bash
-   git clone https://https://github.com/bartko4321/arch-config
+   git clone https://github.com/bartko4321/arch-config
    ```
 4. Wejdź do pobranego folderu:
    ```bash
