@@ -75,11 +75,11 @@ Aby skrypt działał prawidłowo, zachowaj następującą strukturę plików w s
    ```
 3. Sklonuj to repozytorium (podmień link na swój własny!):
    ```bash
-   git clone https://github.com/bartko4321/arch-config
+   git clone https://github.com/bartko4321/arch-config-kde.git
    ```
 4. Wejdź do pobranego folderu:
    ```bash
-   cd arch-config
+   cd arch-config-kde
    ```
 5. Nadaj skryptowi uprawnienia do wykonywania:
    ```bash
