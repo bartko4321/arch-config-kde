@@ -88,7 +88,7 @@ Aby skrypt działał prawidłowo, zachowaj następującą strukturę plików w s
 6. Uruchom skrypt i postępuj zgodnie z komunikatami na ekranie:
    ```bash
    ./install.sh
-    uruchamienie w chroot sudo -u /home/nazwa-użytkownika/arch-config-kde/install.sh
+    uruchamienie w chroot sudo -u nazwa-użytkownika /home/nazwa-użytkownika/arch-config-kde/install.sh
    ```
 
 Po zakończeniu pracy skrypt automatycznie wyczyści tymczasowe uprawnienia, zapisze bezpiecznie stan sesji KDE Plasma na dysku i **zrestartuje komputer**. Po restarcie przywita Cię gotowy, w pełni spersonalizowany system!
