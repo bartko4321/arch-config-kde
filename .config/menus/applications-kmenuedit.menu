@@ -55,12 +55,10 @@
   </Exclude>
   <Layout>
    <Merge type="files"/>
-   <Filename>aimp.utils.tageditor.desktop</Filename>
-   <Filename>aimp.desktop</Filename>
    <Filename>audacity.desktop</Filename>
-   <Filename>aimp.utils.converter.desktop</Filename>
    <Filename>org.kde.kdenlive.desktop</Filename>
    <Filename>org.mixxx.Mixxx.desktop</Filename>
+   <Filename>qmmp.desktop</Filename>
    <Filename>vlc.desktop</Filename>
    <Separator/>
    <Merge type="menus"/>
