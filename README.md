@@ -85,7 +85,7 @@ Aby skrypt działał prawidłowo, zachowaj następującą strukturę plików w s
    ```bash
    chmod +x install.sh
    ```
-6. Uruchom skrypt i postępuj zgodnie z komunikatami na ekranie (skrypt zapyta o dane sieci Wi-Fi, jeśli chcesz się z nią połączyć):
+6. Uruchom skrypt i postępuj zgodnie z komunikatami na ekranie:
    ```bash
    ./install.sh
    ```
