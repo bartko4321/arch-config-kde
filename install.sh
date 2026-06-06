@@ -91,17 +91,6 @@ if [ -f "$SCRIPT_DIR/.update.sh" ]; then
 fi
 
 # ============================================================
-# 2. KONFIGURACJA WI-FI
-# ============================================================
-log_info "Konfiguracja Wi-Fi..."
-read -rp "Podaj SSID (nazwę sieci, wciśnij Enter aby pominąć): " wifi_ssid
-if [ -n "$wifi_ssid" ]; then
-    read -rsp "Podaj hasło: " wifi_pass
-    echo ""
-    nmcli dev wifi connect "$wifi_ssid" password "$wifi_pass" || log_warn "Nie udało się połączyć z siecią Wi-Fi."
-fi
-
-# ============================================================
 # SEKCJA SUDO — KONFIGURACJA SYSTEMOWA
 # ============================================================
 log_info "Rozpoczynanie konfiguracji systemowej (wymaga sudo)..."
@@ -179,7 +168,7 @@ SYSTEM_PKGS=(
 
     # Zarządzanie KDE Plasma
     plasma-firewall plasma-nm plasma-pa kscreen bluedevil kde-gtk-config
-    kinfocenter kio-admin kdeplasma-addons aspell-pl kaccounts-providers dolphin-plugins
+    kinfocenter kio-admin kdeplasma-addons aspell-pl kaccounts-providers dolphin konsole dolphin-plugins
     spectacle gwenview okular ark kate
 
     # Zarządzanie systemem i dyskami
