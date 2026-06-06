@@ -195,6 +195,9 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
+[Containments][25][Applets][39][Applets][57][Configuration][General]
+showNumberOfConnectedDevices=true
+
 [Containments][25][Applets][39][Applets][59]
 immutability=1
 plugin=org.kde.plasma.brightness
@@ -254,8 +257,21 @@ immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
+wallpaperplugin=org.kde.potd
+
+[Containments][56][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][56][General]
+changedPositions={"desktop:/token.txt":["1920x1080","0","0"]}
+lastResolution=1920x1080
+positions={"1920x1080":["1","17","desktop:/token.txt","0","0"]}
+sortMode=-1
+
+[Containments][56][Wallpaper][org.kde.potd][General]
+Provider=bing
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=file:///home/bartek/Pulpit/Skrót do programu.desktop,0,c9ba6224-b240-4408-a3a5-830607614b94
+screenMapping=file:///home/bartek/Pulpit/Skrót do programu.desktop,0,c9ba6224-b240-4408-a3a5-830607614b94,desktop:/token.txt,0,aa998e0b-ae2d-41fa-acbb-e2929b26924a
