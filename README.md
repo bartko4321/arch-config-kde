@@ -95,5 +95,7 @@ Po zakończeniu pracy skrypt automatycznie wyczyści tymczasowe uprawnienia, zap
 
 Wsparcie numer konta: 06291000060000000005038936
 
+ Jeśli projekt Ci się podoba, zostaw gwiazdkę! ⭐
+
 ---
 🛡️ *Używasz skryptu na własną odpowiedzialność. Przed uruchomieniem warto przeanalizować jego zawartość i dostosować listę instalowanych pakietów pod własne preferencje.*
