@@ -93,5 +93,7 @@ Aby skrypt działał prawidłowo, zachowaj następującą strukturę plików w s
 
 Po zakończeniu pracy skrypt automatycznie wyczyści tymczasowe uprawnienia, zapisze bezpiecznie stan sesji KDE Plasma na dysku i **zrestartuje komputer**. Po restarcie przywita Cię gotowy, w pełni spersonalizowany system!
 
+Wsparcie numer konta: 06291000060000000005038936
+
 ---
 🛡️ *Używasz skryptu na własną odpowiedzialność. Przed uruchomieniem warto przeanalizować jego zawartość i dostosować listę instalowanych pakietów pod własne preferencje.*
