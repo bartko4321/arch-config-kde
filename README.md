@@ -69,28 +69,28 @@ To ensure the script works correctly, maintain the following file structure in y
 ### Step-by-Step Instructions:
 
 1. After the first boot of your new Arch Linux system, log into the console (TTY) with your standard user account.
-2. Update the Pacman database and install `git`:
+2. Update the Pacman database and install `git`
    ```bash
    sudo pacman -Sy git --noconfirm
    ```
-3. Clone this repository (replace the link with your own!):
+3. Clone this repository (replace the link with your own!)
    ```bash
    git clone https://github.com/bartko4321/arch-config-kde.git
    ```
-4. Enter the downloaded folder:
+4. Enter the downloaded folder
    ```bash
    cd arch-config-kde
    ```
-5. Make the script executable:
+5. Make the script executable
    ```bash
    chmod +x install.sh
    ```
-6. Run the script and follow the on-screen instructions:
+6. Run the script and follow the on-screen instructions
    ```bash
    ./install.sh
    ```
 
-7. Running in chroot:
+7. Running in chroot
  ```bash
 sudo -u username /home/username/kde-config-kde/install.sh
 
