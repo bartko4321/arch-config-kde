@@ -88,10 +88,12 @@ To ensure the script works correctly, maintain the following file structure in y
 6. Run the script and follow the on-screen instructions:
    ```bash
    ./install.sh
+   ```
 
 7. Running in chroot:
  ```bash
-sudo -u username /home/username/kde-config-kde/install.sh
+   sudo -u username /home/username/kde-config-kde/install.sh
+
    ```
 
 Once finished, the script will automatically clean up temporary privileges, safely save the KDE Plasma session state to disk, and **reboot the computer**. After the restart, you'll be greeted by a fully personalized, ready-to-use system!
