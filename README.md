@@ -1,101 +1,101 @@
-# 🚀 Kompleksowa Konfiguracja Arch Linux & KDE Plasma
+# 🚀 Comprehensive Arch Linux & KDE Plasma Configuration
 
-Ten projekt zawiera zautomatyzowany skrypt konfiguracyjny (`install.sh`), który przekształca świeżo zainstalowany system Arch Linux w kompletne, zoptymalizowane i piękne środowisko pracy oparte na środowisku graficznym **KDE Plasma**.
+This project contains an automated configuration script (`install.sh`) that transforms a freshly installed Arch Linux system into a complete, optimized, and beautiful working environment based on the **KDE Plasma** desktop.
 
-Skrypt nie tylko instaluje niezbędne oprogramowanie, ale dba również o optymalizację pod kątem wydajności (w tym gaming), konfigurację sprzętową (GPU) oraz automatyczne wdrożenie prywatnych plików konfiguracyjnych (*dotfiles*).
-
----
-
-## ✨ Główne Funkcje Skryptu
-
-### 1. ⚙️ Optymalizacja Systemowa & Pacman
-*   **Przyśpieszenie Pacmana:** Włączenie równoległego pobierania (10 połączeń), kolorów oraz kultowego trybu `ILoveCandy`.
-*   **Oszczędność miejsca (NoExtract):** Blokowanie wypakowywania zbędnych lokalizacji językowych (zostają tylko PL i EN), stron podręcznika (*man pages*) oraz zbędnej dokumentacji, co znacząco przyśpiesza instalację pakietów.
-*   **Systemd & Logi:** Skrócenie czasu oczekiwania na zamknięcie usług (*DefaultTimeoutStopSec=3s*) oraz czyszczenie starych logów systemowych (powyżej 2 dni).
-
-### 2. 🌐 Sieć & Bezpieczeństwo
-*   **Prywatność:** Automatyczne przestawienie DNS dla aktywnego połączenia na bezpieczne i szybkie serwery **Cloudflare** (IPv4 & IPv6).
-*   **Zapora Sieciowa:** Konfiguracja `UFW` z regułami zezwalającymi na ruch dla maszyn wirtualnych.
-
-### 3. 📦 Inteligentna Instalacja Pakietów (Pacman + AUR)
-*   **Wykrywanie GPU:** Automatyczne rozpoznanie karty graficznej (**Nvidia / AMD / Intel**) i dobór dedykowanych 32-bitowych bibliotek graficznych (przydatne do gier/Steam).
-*   **Bogaty zestaw aplikacji:** Narzędzia deweloperskie, kodeki multimedialne, pakiety biurowe (LibreOffice PL), komunikatory (Discord, Telegram), wirtualizacja (QEMU/KVM) oraz narzędzia do grania (WINE Staging, Gamemode, Mangohud).
-*   **Flathub & AUR:** Automatyczna instalacja pomocnika `yay`, konfiguracja repozytorium Flathub oraz pobranie kluczowych pakietów z AUR (np. Google Chrome, Brave, Ventoy).
-
-### 4. 🎛️ Wizualne Wykończenie & Bootloader
-*   **Plymouth (Early KMS):** Włączenie animowanego ekranu ładowania systemu (*bgrt*) zintegrowanego z modułami jądra dla płynnego przejścia od włączenia komputera do pulpitu.
-*   **Ukrycie Bootloadera:** Skrócenie czasu wyświetlania menu GRUB/systemd-boot do 0 sekund w celu maksymalnego przyśpieszenia rozruchu.
-*   **Personalizacja KDE:** Automatyczne wdrożenie niestandardowych ekranów powitalnych (*Splash screen*), awatarów użytkownika, tapet ekranu blokowania oraz systemowych (w różnych rozdzielczościach).
-
-### 5. 🐚 Nowoczesna Konsola
-*   Instalacja i ustawienie **ZSH** jako domyślnej powłoki użytkownika.
-*   Instalacja frameworka **Oh My Zsh** oraz pięknego, responsywnego motywu **Powerlevel10k**.
-
-### 6. 📁 Automatyczne Wdrożenie Dotfiles
-*   Kopiowanie spersonalizowanych ustawień z katalogów `.config`, `.local` oraz `.icons`.
-*   **Bezpieczeństwo ścieżek:** Skrypt automatycznie wykrywa nazwę aktualnego użytkownika i podmienia stare powiązania (np. ścieżki `/home/bartek`) w plikach konfiguracyjnych na Twoją nową nazwę użytkownika, zapobiegając uszkodzeniu profili.
+The script not only installs essential software, but also handles performance optimization (including gaming), hardware configuration (GPU), and automatic deployment of private configuration files (*dotfiles*).
 
 ---
 
-## 📁 Struktura Repozytorium
+## ✨ Main Features
 
-Aby skrypt działał prawidłowo, zachowaj następującą strukturę plików w swoim repozytorium na GitHubie:
+### 1. ⚙️ System Optimization & Pacman
+*   **Pacman speedup:** Enables parallel downloads (10 connections), colors, and the iconic `ILoveCandy` mode.
+*   **Disk space savings (NoExtract):** Blocks extraction of unnecessary language locales (only PL and EN are kept), man pages, and redundant documentation, significantly speeding up package installation.
+*   **Systemd & Logs:** Reduces service shutdown timeout (*DefaultTimeoutStopSec=3s*) and clears old system logs (older than 2 days).
+
+### 2. 🌐 Networking & Security
+*   **Privacy:** Automatically switches DNS for the active connection to fast and secure **Cloudflare** servers (IPv4 & IPv6).
+*   **Firewall:** Configures `UFW` with rules allowing traffic for virtual machines.
+
+### 3. 📦 Smart Package Installation (Pacman + AUR)
+*   **GPU detection:** Automatically identifies your graphics card (**Nvidia / AMD / Intel**) and selects dedicated 32-bit graphics libraries (useful for games/Steam).
+*   **Rich application set:** Developer tools, multimedia codecs, office suite (LibreOffice PL), messaging apps (Discord, Telegram), virtualization (QEMU/KVM), and gaming tools (WINE Staging, Gamemode, Mangohud).
+*   **Flathub & AUR:** Automatic installation of the `yay` AUR helper, Flathub repository setup, and downloading key AUR packages (e.g. Google Chrome, Brave, Ventoy).
+
+### 4. 🎛️ Visual Polish & Bootloader
+*   **Plymouth (Early KMS):** Enables an animated boot splash (*bgrt*) integrated with kernel modules for a smooth transition from power-on to desktop.
+*   **Bootloader hiding:** Reduces the GRUB/systemd-boot menu display time to 0 seconds for maximum boot speed.
+*   **KDE personalization:** Automatic deployment of custom splash screens, user avatars, lock screen wallpapers, and system wallpapers in multiple resolutions.
+
+### 5. 🐚 Modern Terminal
+*   Installs and sets **ZSH** as the default user shell.
+*   Installs the **Oh My Zsh** framework and the beautiful, responsive **Powerlevel10k** theme.
+
+### 6. 📁 Automatic Dotfiles Deployment
+*   Copies personalized settings from the `.config`, `.local`, and `.icons` directories.
+*   **Path safety:** The script automatically detects the current username and replaces old references (e.g. `/home/bartek` paths) in configuration files with your new username, preventing broken profiles.
+
+---
+
+## 📁 Repository Structure
+
+To ensure the script works correctly, maintain the following file structure in your GitHub repository:
 
 ```text
-📦 twoje-repozytorium
-├── 📜 install.sh            # Główny skrypt konfiguracyjny
-├── 📜 .update.sh            # Opcjonalny skrypt aktualizacyjny
-├── 📄 piwo.png              # Awatar użytkownika
-├── 📄 start.png             # Tapeta startowa
-├── 📄 plasmalogin.conf      # Konfiguracja ekranu logowania
-├── 📄 1920x1080.png         # Tapeta w rozdzielczości Full HD
-├── 📄 2560x1440.png         # Tapeta w rozdzielczości 2K
-├── 📄 5120x2880.png         # Tapeta w rozdzielczości 5K / 4K
-├── 📂 .config/              # Twoje dotfiles z ~/.config
-├── 📂 .local/               # Twoje dotfiles z ~/.local
-├── 📂 .icons/               # Twoje ikony i kursor z ~/.icons
-├── 📂 splash/               # Niestandardowy ekran powitalny KDE
-└── 📂 bleachbit/            # Gotowa konfiguracja programu BleachBit
+📦 your-repository
+├── 📜 install.sh            # Main configuration script
+├── 📜 .update.sh            # Optional update script
+├── 📄 piwo.png              # User avatar
+├── 📄 start.png             # Login screen wallpaper
+├── 📄 plasmalogin.conf      # Login screen configuration
+├── 📄 1920x1080.png         # Full HD wallpaper
+├── 📄 2560x1440.png         # 2K wallpaper
+├── 📄 5120x2880.png         # 5K / 4K wallpaper
+├── 📂 .config/              # Your dotfiles from ~/.config
+├── 📂 .local/               # Your dotfiles from ~/.local
+├── 📂 .icons/               # Your icons and cursor from ~/.icons
+├── 📂 splash/               # Custom KDE splash screen
+└── 📂 bleachbit/            # Pre-configured BleachBit settings
 ```
 
 ---
 
-## 🚀 Jak Uruchomić Skrypt (Po Instalacji Systemu)
+## 🚀 How to Run the Script (After System Installation)
 
-### ⚠️ Ważne Wymagania Przed Uruchomieniem:
-1. Skrypt **NIE MOŻE** być uruchamiany bezpośrednio z konta `root`.
-2. Musisz uruchomić go na świeżo utworzonym **zwykłym użytkowniku**, który posiada uprawnienia do `sudo` (należy do grupy `wheel`).
+### ⚠️ Important Requirements Before Running:
+1. The script **CANNOT** be run directly from the `root` account.
+2. You must run it as a freshly created **regular user** with `sudo` privileges (member of the `wheel` group).
 
-### Instrukcja Krok po Kroku:
+### Step-by-Step Instructions:
 
-1. Po pierwszym uruchomieniu nowego systemu Arch Linux, zaloguj się do konsoli (TTY) na swoje standardowe konto użytkownika.
-2. Zaktualizuj bazy danych pacmana i zainstaluj narzędzie `git`:
+1. After the first boot of your new Arch Linux system, log into the console (TTY) with your standard user account.
+2. Update the Pacman database and install `git`:
    ```bash
    sudo pacman -Sy git --noconfirm
    ```
-3. Sklonuj to repozytorium (podmień link na swój własny!):
+3. Clone this repository (replace the link with your own!):
    ```bash
    git clone https://github.com/bartko4321/arch-config-kde.git
    ```
-4. Wejdź do pobranego folderu:
+4. Enter the downloaded folder:
    ```bash
    cd arch-config-kde
    ```
-5. Nadaj skryptowi uprawnienia do wykonywania:
+5. Make the script executable:
    ```bash
    chmod +x install.sh
    ```
-6. Uruchom skrypt i postępuj zgodnie z komunikatami na ekranie:
+6. Run the script and follow the on-screen instructions:
    ```bash
    ./install.sh
-    uruchamienie w chroot sudo -u nazwa-użytkownika /home/nazwa-użytkownika/arch-config-kde/install.sh
+   # running in chroot: sudo -u username /home/username/arch-config-kde/install.sh
    ```
 
-Po zakończeniu pracy skrypt automatycznie wyczyści tymczasowe uprawnienia, zapisze bezpiecznie stan sesji KDE Plasma na dysku i **zrestartuje komputer**. Po restarcie przywita Cię gotowy, w pełni spersonalizowany system!
+Once finished, the script will automatically clean up temporary privileges, safely save the KDE Plasma session state to disk, and **reboot the computer**. After the restart, you'll be greeted by a fully personalized, ready-to-use system!
 
-Wsparcie numer konta: 06291000060000000005038936
+Bank account for support: 06291000060000000005038936
 
- Jeśli projekt Ci się podoba, zostaw gwiazdkę! ⭐
+If you find this project useful, leave a star! ⭐
 
 ---
-🛡️ *Używasz skryptu na własną odpowiedzialność. Przed uruchomieniem warto przeanalizować jego zawartość i dostosować listę instalowanych pakietów pod własne preferencje.*
+🛡️ *Use this script at your own risk. Before running it, it's worth reviewing its contents and adjusting the package list to your own preferences.*
