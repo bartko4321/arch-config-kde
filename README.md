@@ -92,7 +92,7 @@ To ensure the script works correctly, maintain the following file structure in y
 
 7. Running in chroot:
  ```bash
-    sudo -u username /home/username/kde-config-kde/install.sh
+sudo -u username /home/username/kde-config-kde/install.sh
 
    ```
 
